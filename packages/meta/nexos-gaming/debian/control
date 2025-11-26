@@ -1,0 +1,13 @@
+Source: nexos-gaming
+Section: admin
+Priority: optional
+Maintainer: NexOS Team <team@nexos.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/nexos-project/nexos-project
+
+Package: nexos-gaming
+Architecture: any
+Depends: ${misc:Depends}, steam, wine, gamemode, mangohud, nexos-base
+Description: NexOS Gaming Stack
+ Gaming components and tools for NexOS including Steam, Wine, and performance utilities.

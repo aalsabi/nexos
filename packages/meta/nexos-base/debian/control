@@ -1,0 +1,13 @@
+Source: nexos-base
+Section: admin
+Priority: required
+Maintainer: NexOS Team <team@nexos.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/nexos-project/nexos-project
+
+Package: nexos-base
+Architecture: any
+Depends: ${misc:Depends}, sudo, curl, wget, git, systemd, dbus
+Description: NexOS base system
+ Basic system components and essential utilities for NexOS.

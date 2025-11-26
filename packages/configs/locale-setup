@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+echo "Setting up Arabic language support..."
+
+apt-get update
+apt-get install -y \
+  fonts-noto \
+  fonts-arabeyes \
+  fonts-kacst \
+  ibus-m17n
+
+echo "ar_SA.UTF-8 UTF-8" >> /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+
+update-locale LANG=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8
+
+echo "Arabic language support configured successfully."

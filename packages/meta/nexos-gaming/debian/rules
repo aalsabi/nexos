@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	# dotnet publish step (if needed) goes here
+
+override_dh_auto_install:
+	dh_auto_install

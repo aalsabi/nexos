@@ -1,0 +1,13 @@
+Source: nexos-devtools
+Section: admin
+Priority: optional
+Maintainer: NexOS Team <team@nexos.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/nexos-project/nexos-project
+
+Package: nexos-devtools
+Architecture: any
+Depends: ${misc:Depends}, dotnet-sdk-8.0, gcc, g++, make, git, docker.io, nexos-base
+Description: NexOS Development Tools
+ Development environment and tools for NexOS including .NET SDK and compilers.

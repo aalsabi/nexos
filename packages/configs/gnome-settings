@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+echo "Configuring GNOME desktop for Windows/macOS migrants..."
+
+gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
+
+gsettings set org.gnome.desktop.interface enable-hot-corners false
+
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM' || true
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false || true
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 32 || true
+
+gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
+
+echo "GNOME desktop configured successfully."

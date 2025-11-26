@@ -1,0 +1,13 @@
+Source: nexos-welcome
+Section: admin
+Priority: optional
+Maintainer: NexOS Team <team@nexos.org>
+Build-Depends: debhelper-compat (= 13), dotnet-sdk-8.0
+Standards-Version: 4.6.2
+Homepage: https://github.com/nexos-project/nexos-project
+
+Package: nexos-welcome
+Architecture: any
+Depends: ${misc:Depends}, dotnet-runtime-8.0, policykit-1, curl, apt
+Description: NexOS Welcome Application
+ Welcome screen and setup wizard for new NexOS users coming from Windows/macOS.
